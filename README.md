@@ -1,59 +1,67 @@
-# NLP Projects
+# 🚀 NLP Projects: Advanced Language Modeling Pipeline
 
-This repository contains a collection of Natural Language Processing (NLP) projects focused on text generation, translation, and sentiment analysis using advanced language models. Each project is implemented in Google Colab for easy access and reproducibility. Below is an overview of the projects included in this repository.
+This repository hosts a collection of production-ready NLP projects focused on **Text Generation**, **Machine Translation**, and **Sentiment Analysis**. All projects are implemented using a standardized **7-Phase Modular Pipeline** for maximum reproducibility and scalability.
 
-## Table of Contents
-- [Project 1: Text Generation Using Llama2 Model in Hinglish](#project-1-text-generation-using-llama2-model-in-hinglish)
-- [Project 2: French-to-English Translation with Llama2 Fine-Tuning](#project-2-french-to-english-translation-with-llama2-fine-tuning)
-- [Project 3: English-to-Bengali Translation with Llama2 Fine-Tuning](#project-3-english-to-bengali-translation-with-llama2-fine-tuning)
-- [Project 4: English-to-Hindi Translation with Opus-MT Fine-Tuning](#project-4-english-to-hindi-translation-with-opus-mt-fine-tuning)
-- [Project 5: Indian Politics Sentiment Analysis](#project-5-indian-politics-sentiment-analysis)
-- [Setup and Requirements](#setup-and-requirements)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+## 🏗️ The 7-Phase Pipeline Structure
+Every project in this repository follows a rigorous engineering structure:
+1.  **Environment Setup**: Dependency management and hardware verification.
+2.  **Configuration**: Centralized hyperparameters and model IDs.
+3.  **Data Acquisition**: Automated dataset loading from Hugging Face.
+4.  **Preprocessing**: Advanced tokenization and data formatting.
+5.  **Model Preparation**: 4-bit quantization (bitsandbytes) and LoRA (PEFT).
+6.  **Training**: Optimized fine-tuning using `SFTTrainer` or `Trainer` API.
+7.  **Inference**: Real-time testing and performance validation.
 
-## Project 1: Text Generation Using Llama2 Model in Hinglish
-This project demonstrates text generation using the Llama2 model fine-tuned for Hinglish (a mix of Hindi and English). The model generates coherent text in Hinglish, suitable for applications like chatbots or content creation.
+---
 
-- **Notebook**: [Text Generation in Hinglish](https://colab.research.google.com/drive/1_M-6kwsGlP2mblV5tBazc6lKuYgQ8E9R#scrollTo=kXzchEL2xogp)
-- **Key Features**:
-  - Fine-tuned Llama2 model for Hinglish text generation.
-  - Example use cases: conversational agents, creative writing.
-  - Includes preprocessing and generation scripts.
+## 📂 Project Overview
 
-## Project 2: French-to-English Translation with Llama2 Fine-Tuning
-This project focuses on fine-tuning the Llama2 model for French-to-English translation. It includes data preprocessing, model training, and evaluation steps.
+### 1. Hinglish Text Generation (Llama-2)
+Fine-tuning the TinyLlama model for **Hinglish** (Hindi + English) conversational text generation.
+-   **Local Notebook**: [`llama2_hinglish_gen.ipynb`](./llama2_hinglish_gen.ipynb)
+-   **Colab Reference**: [Text Generation in Hinglish](https://colab.research.google.com/drive/1_M-6kwsGlP2mblV5tBazc6lKuYgQ8E9R)
+-   **Key Features**: Parameter-efficient fine-tuning (LoRA), 4-bit quantization, and Alpaca-style prompt engineering.
 
-- **Notebook**: [French-to-English Translation](https://colab.research.google.com/drive/1phODqVfpFwcQHpG9gondIUDtTM6sT4_L?usp=sharing)
-- **Key Features**:
-  - Fine-tuned Llama2 for high-quality translations.
-  - Dataset preparation and tokenization for French-English pairs.
-  - Evaluation metrics for translation accuracy.
+### 2. French-to-English Translation
+End-to-end translation pipeline optimized for high-quality French-English bilingual tasks.
+-   **Local Notebook**: [`llama2_en_fr_pipeline.ipynb`](./llama2_en_fr_pipeline.ipynb)
+-   **Colab Reference**: [French-to-English Translation](https://colab.research.google.com/drive/1phODqVfpFwcQHpG9gondIUDtTM6sT4_L)
 
-## Project 3: English-to-Bengali Translation with Llama2 Fine-Tuning
-This project fine-tunes the Llama2 model for English-to-Bengali translation, enabling accurate translations for Bengali-speaking audiences.
+### 3. English-to-Bengali Translation
+Fine-tuning Llama-2 (TinyLlama) for accurate English-to-Bengali translation.
+-   **Local Notebook**: [`llama2_bn_pipeline.ipynb`](./llama2_bn_pipeline.ipynb)
+-   **Colab Reference**: [English-to-Bengali Translation](https://colab.research.google.com/drive/1ggFd6sYfS5G9iQbGkUPHwfJCbEm87R3A)
 
-- **Notebook**: [English-to-Bengali Translation](https://colab.research.google.com/drive/1ggFd6sYfS5G9iQbGkUPHwfJCbEm87R3A?usp=sharing)
-- **Key Features**:
-  - Customized Llama2 model for English-to-Bengali translation.
-  - Preprocessing pipeline for bilingual datasets.
-  - Performance evaluation using BLEU scores.
+### 4. English-to-Hindi Translation
+Efficient English-to-Hindi translation using a streamlined Llama-2 pipeline.
+-   **Local Notebook**: [`llama2_en_hi_pipeline.ipynb`](./llama2_en_hi_pipeline.ipynb)
+-   **Colab Reference**: [English-to-Hindi Translation](https://colab.research.google.com/drive/1B0gj0RpJ1uxW7CjEvooP5Bj1FGPX6HAa)
 
-## Project 4: English-to-Hindi Translation with Opus-MT Fine-Tuning
-This project fine-tunes the Opus-MT model for English-to-Hindi translation, leveraging a lightweight and efficient architecture for translation tasks.
+### 5. Indian Politics Sentiment Analysis
+Multilingual sentiment classification for Indian political discourse using XLM-RoBERTa.
+-   **Local Notebook**: [`politics_sentiment_analysis.ipynb`](./politics_sentiment_analysis.ipynb)
+-   **Colab Reference**: [Indian Politics Sentiment Analysis](https://colab.research.google.com/drive/1sQtYp5oTfuP5L2mqnAytxEtWhy62UYLN)
 
-- **Notebook**: [English-to-Hindi Translation](https://colab.research.google.com/drive/1B0gj0RpJ1uxW7CjEvooP5Bj1FGPX6HAa?usp=sharing)
-- **Key Features**:
-  - Fine-tuned Opus-MT model for English-to-Hindi translation.
-  - Optimized for low-resource environments.
-  - Includes dataset preparation and model evaluation.
+---
 
-## Project 5: Indian Politics Sentiment Analysis
-This project performs sentiment analysis on Indian politics-related text data, identifying positive, negative, or neutral sentiments using NLP techniques.
+## 🛠️ Setup & Requirements
 
-- **Notebook**: [Indian Politics Sentiment Analysis](https://colab.research.google.com/drive/1sQtYp5oTfuP5L2mqnAytxEtWhy62UYLN?usp=sharing)
-- **Key Features**:
-  - Sentiment classification using machine learning or deep learning models.
-  - Preprocessing of political text data (e.g., tweets, articles).
-  - Visualization of sentiment trends and model performance.
+```bash
+# Clone the repository
+git clone https://github.com/yhimanshu22/NLP-Projects
+cd NLP-Projects
+
+# Install core dependencies
+pip install transformers trl datasets accelerate peft bitsandbytes
+```
+
+## 🚀 Usage
+1.  Open any `.ipynb` notebook in VS Code or Google Colab.
+2.  Ensure you have an NVIDIA GPU for the 4-bit quantization steps.
+3.  Run the phases sequentially from Phase 1 to Phase 7.
+
+## 🤝 Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or new NLP modules.
+
+## 📜 License
+This project is licensed under the MIT License.
