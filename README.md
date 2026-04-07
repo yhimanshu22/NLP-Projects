@@ -59,9 +59,3 @@ pip install transformers trl datasets accelerate peft bitsandbytes
 1.  Open any `.ipynb` notebook in VS Code or Google Colab.
 2.  Ensure you have an NVIDIA GPU for the 4-bit quantization steps.
 3.  Run the phases sequentially from Phase 1 to Phase 7.
-
-## 🤝 Contributing
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or new NLP modules.
-
-## 📜 License
-This project is licensed under the MIT License.
